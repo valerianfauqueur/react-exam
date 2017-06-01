@@ -1,9 +1,3 @@
-/**
- * Created by thomashourlier on 2/26/17.
- */
-
-import { combineReducers } from 'redux';
-
 function jediReducer(state = [], action) {
   switch (action.type) {
     case 'FETCH_FINISH':
@@ -16,6 +10,4 @@ function jediReducer(state = [], action) {
   }
 }
 
-export default combineReducers({
-  jedi: jediReducer,
-});
+export default jediReducer;
