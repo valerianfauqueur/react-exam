@@ -26,6 +26,7 @@ export default function reducer(state = initialState, action) {
         ...state,
         loading: true,
       };
+
     case FETCH_JEDIS_SUCCEEDED :
       return {
         ...state,
@@ -43,26 +44,26 @@ export default function reducer(state = initialState, action) {
         debugError: action.error.message,
       };
 
-      case ADD_JEDI_REQUESTED :
-        return {
-          ...state,
-          loading: true,
-        };
+    case ADD_JEDI_REQUESTED :
+      return {
+        ...state,
+        loading: true,
+      };
 
-      case ADD_JEDI_SUCCEEDED :
-        return {
-          ...state,
-          jedis: [...state.jedis, action.newJedi],
-          loading: false,
-        };
+    case ADD_JEDI_SUCCEEDED :
+      return {
+        ...state,
+        jedis: [...state.jedis, action.newJedi],
+        loading: false,
+      };
 
-      case ADD_JEDI_FAILED :
-        return {
-          ...state,
-          loading: false,
-          error: true,
-          debugError: action.error.message,
-        };
+    case ADD_JEDI_FAILED :
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        debugError: action.error.message,
+      };
 
     default:
       return state;
