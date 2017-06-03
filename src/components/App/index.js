@@ -47,6 +47,9 @@ class App extends Component {
 
 App.propTypes = {
   jedi: PropTypes.array,
+  loading: PropTypes.boolean,
+  error: PropTypes.boolean,
+  errorMsg: PropTypes.string
 };
 
 export default connect(

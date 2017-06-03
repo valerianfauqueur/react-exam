@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class DebugError extends Component {
   constructor(props) {
@@ -13,5 +13,9 @@ class DebugError extends Component {
     );
   }
 }
+
+DebugError.propTypes = {
+  error: PropTypes.string,
+};
 
 export default DebugError;
