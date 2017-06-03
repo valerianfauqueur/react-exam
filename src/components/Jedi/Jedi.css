@@ -87,3 +87,8 @@
   background-color: yellow;
   color: black;
 }
+
+.jedi__form__error
+{
+  color: red;
+}
