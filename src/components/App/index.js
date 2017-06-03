@@ -4,7 +4,7 @@ import logo from 'assets/logo.svg';
 import 'components/App/App.css';
 import JediCard from 'components/Jedi/JediCard';
 
-import { fetchJedi } from 'actions/jedi';
+import { fetchJedi } from 'redux/modules/jedi';
 
 function mapStateToProps(state) {
   return {

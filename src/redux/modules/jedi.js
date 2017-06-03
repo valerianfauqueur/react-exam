@@ -1,8 +1,16 @@
-/**
- * Created by thomashourlier on 2/26/17.
- */
-
 import axios from 'axios';
+
+export default function reducer(state = [], action = {}) {
+  switch (action.type) {
+    case 'FETCH_FINISH':
+      return [
+        ...action.payload,
+        ...state,
+      ];
+
+    default: return state;
+  }
+}
 
 export function fetchJedi() {
   return (dispatch) => {
