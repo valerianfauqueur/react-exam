@@ -89,6 +89,11 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      ["module-resolver", {
+        "root": ["./src"]
+      }]
     ]
   },
   "eslintConfig": {
