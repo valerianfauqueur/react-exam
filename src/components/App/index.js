@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import logo from 'assets/logo.svg';
 import 'components/App/App.css';
+import JediCard from 'components/Jedi/JediCard';
 
 import { fetchJedi } from 'actions/jedi';
 
@@ -22,6 +23,9 @@ class App extends Component {
 
   render() {
     const { jedi } = this.props;
+    const jediCards = jedi.map((jedi, index) => {
+      return (<JediCard key={index} jedi={jedi} />);
+    });
 
     return (
       <div className="App">
@@ -29,11 +33,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        {jedi.map((jedi, index) => (
-          <div key={index}>
-            Jedi: id: {jedi.id} name: {jedi.name}
-          </div>
-        ))}
+        <ul className="jedi__container">
+          {jediCards}
+        </ul>
       </div>
     );
   }
