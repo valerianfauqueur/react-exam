@@ -38,7 +38,7 @@ class App extends Component {
         <div className="header__container">
           { loading ?
             <Loader /> :
-            <img width="50" height="50" src={jediLogo}></img> }
+            <img alt='logo of the jedis' width="50" height="50" src={jediLogo}></img> }
         </div>
         { error ?
         <DebugError error={errorMsg} /> :

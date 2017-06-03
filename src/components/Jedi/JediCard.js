@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import 'components/Jedi/Jedi.css';
 
 class JediCard extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const jedi = this.props.jedi;
@@ -16,6 +13,7 @@ class JediCard extends Component {
       </li>
     );
   }
+  
 }
 
 export default JediCard;
