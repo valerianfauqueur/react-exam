@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import logo from 'assets/logo.svg';
 import 'components/App/App.css';
 import JediCard from 'components/Jedi/JediCard';
+import NewJediForm from 'components/Jedi/NewJediForm';
 
 import { fetchJedi } from 'redux/modules/jedi';
 
@@ -36,6 +37,7 @@ class App extends Component {
         <ul className="jedi__container">
           {jediCards}
         </ul>
+        <NewJediForm />
       </div>
     );
   }
