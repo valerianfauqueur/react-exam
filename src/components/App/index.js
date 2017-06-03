@@ -8,7 +8,7 @@ import { fetchJedi } from 'redux/modules/jedi';
 
 function mapStateToProps(state) {
   return {
-    jedi: state.jedi,
+    jedi: state.jedi.jedis,
   };
 }
 
