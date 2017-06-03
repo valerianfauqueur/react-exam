@@ -54,8 +54,8 @@ class App extends Component {
 
 App.propTypes = {
   jedi: PropTypes.array,
-  loading: PropTypes.boolean,
-  error: PropTypes.boolean,
+  loading: PropTypes.bool,
+  error: PropTypes.bool,
   errorMsg: PropTypes.string
 };
 
