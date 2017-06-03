@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import logo from 'assets/logo.svg';
 import 'components/App/App.css';
+import Loader from 'components/App/Loader';
+import DebugError from 'components/App/DebugError';
 import JediCard from 'components/Jedi/JediCard';
 import NewJediForm from 'components/Jedi/NewJediForm';
 
@@ -10,6 +11,9 @@ import { fetchJedi } from 'redux/modules/jedi';
 function mapStateToProps(state) {
   return {
     jedi: state.jedi.jedis,
+    loading: state.jedi.loading,
+    error: state.jedi.error,
+    errorMsg: state.jedi.debugError,
   };
 }
 
@@ -23,17 +27,15 @@ class App extends Component {
   }
 
   render() {
-    const { jedi } = this.props;
+    const { jedi, loading, error, errorMsg } = this.props;
     const jediCards = jedi.map((jedi, index) => {
       return (<JediCard key={index} jedi={jedi} />);
     });
 
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+        <Loader loading={loading} />
+        { error ? <DebugError error={errorMsg} /> : false }
         <ul className="jedi__container">
           {jediCards}
         </ul>

@@ -36,7 +36,7 @@ export default function reducer(state = initialState, action) {
         loading: false,
         loaded: false,
         error: true,
-        debugError: action.error,
+        debugError: action.error.message,
       };
 
       case ADD_JEDI_REQUESTED :
@@ -57,7 +57,7 @@ export default function reducer(state = initialState, action) {
           ...state,
           loading: false,
           error: true,
-          debugError: action.error,
+          debugError: action.error.message,
         };
 
     default:
