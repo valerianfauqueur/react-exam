@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import jediLogo from 'assets/jediLogo.png';
 import 'components/App/App.css';
 import Loader from 'components/App/Loader';
 import DebugError from 'components/App/DebugError';
@@ -34,8 +35,14 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Loader loading={loading} />
-        { error ? <DebugError error={errorMsg} /> : false }
+        <div className="header__container">
+          { loading ?
+            <Loader /> :
+            <img width="50" height="50" src={jediLogo}></img> }
+        </div>
+        { error ?
+        <DebugError error={errorMsg} /> :
+        false }
         <ul className="jedi__container">
           {jediCards}
         </ul>
