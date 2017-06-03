@@ -1,23 +1,89 @@
-.jedi__card {
-  display: flex;
-  flex-flow: column;
-  padding: 1rem 1rem;
-  margin: 1vw;
+.jedi__card
+{
+    display: flex;
+    flex-flow: column;
 
-  background-color: black;
-  border: 3px solid yellow;
-  border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  color:yellow;
-  cursor: pointer;
+    margin: 1vw;
+    padding: 1rem 1rem;
 
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.25,.8,.25,1);
+
+    color: yellow;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    background-color: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+
 }
 
-.jedi__card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.jedi__card:hover
+{
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
 }
 
-.jedi__registrationNumer {
-  font-size: 0.8rem;
+.jedi__registrationNumer
+{
+    font-size: .8rem;
+}
+
+.jedi__card--form
+{
+    width: 20vw;
+
+    align-items: center;
+
+    cursor: initial;
+}
+
+.jedi__card--form:hover
+{
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+.jedi__card--form input
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    margin: .83rem 0;
+
+    color: yellow;
+    border: none;
+    border-bottom: 2px solid yellow;
+    background-color: black;
+}
+
+.jedi__card--form input:focus
+{
+  outline: none;
+}
+
+.jedi__card--form input::placeholder
+{
+  color: yellow;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.jedi__card--form button
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin: 1rem 0;
+    padding: .5rem;
+
+    color: yellow;
+    border: 1px solid yellow;
+    background-color: black;
+
+    cursor: pointer;
+}
+
+.jedi__card--form button:hover
+{
+  background-color: yellow;
+  color: black;
 }

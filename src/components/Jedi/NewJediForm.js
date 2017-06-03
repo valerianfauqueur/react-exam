@@ -31,9 +31,9 @@ class NewJediForm extends Component {
 
   render() {
     return (
-      <div className="jedi__form">
-        <input onChange={ this.handleChange } value={ this.state.jediName } placeholder="Name of the Jedi" type="text" name="jediName" className='jedi__input'></input>
-        <button onClick={ this.submitJedi } className='jedi__submit'>Add the Jedi</button>
+      <div className="jedi__card jedi__card--form">
+        <input onChange={ this.handleChange } value={ this.state.jediName } placeholder="Name of the Jedi" type="text" name="jediName"></input>
+        <button onClick={ this.submitJedi }>Add the Jedi</button>
       </div>
     );
   }
