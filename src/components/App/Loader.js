@@ -1,3 +1,4 @@
+//dependencies
 import React, { Component} from 'react';
 
 class Loadeur extends Component {

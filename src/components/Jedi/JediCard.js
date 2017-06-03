@@ -1,4 +1,7 @@
+//dependencies
 import React, { Component } from 'react';
+
+//style
 import 'components/Jedi/Jedi.css';
 
 class JediCard extends Component {
@@ -13,7 +16,7 @@ class JediCard extends Component {
       </li>
     );
   }
-  
+
 }
 
 export default JediCard;

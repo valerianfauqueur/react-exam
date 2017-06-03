@@ -1,12 +1,20 @@
+//dependencies
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+
+//assets
 import jediLogo from 'assets/jediLogo.png';
+
+//style
 import 'components/App/App.css';
+
+//component
 import Loader from 'components/App/Loader';
 import DebugError from 'components/App/DebugError';
 import JediCard from 'components/Jedi/JediCard';
 import NewJediForm from 'components/Jedi/NewJediForm';
 
+//redux modules
 import { fetchJedi } from 'redux/modules/jedi';
 
 function mapStateToProps(state) {

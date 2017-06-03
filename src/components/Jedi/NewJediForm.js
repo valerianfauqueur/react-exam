@@ -1,6 +1,8 @@
+//dependencies
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+//redux module
 import { postJedi } from 'redux/modules/jedi';
 
 function mapStateToProps(state) {
