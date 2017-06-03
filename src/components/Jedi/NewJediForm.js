@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 
 import { postJedi } from 'redux/modules/jedi';
 
+function mapStateToProps(state) {
+  return {};
+}
+
 class NewJediForm extends Component {
 
   constructor(props) {
@@ -37,10 +41,6 @@ class NewJediForm extends Component {
       </div>
     );
   }
-}
-
-function mapStateToProps(state) {
-  return {};
 }
 
 export default connect(
