@@ -1,4 +1,8 @@
 import axios from 'axios';
+import config from 'config';
+
+const HOST = config().API_HOST;
+const JEDI_ENDPOINT = 'jedi';
 
 export const FETCH_JEDIS_REQUESTED = '@@jedis/FETCH_REQUESTED';
 export const FETCH_JEDIS_SUCCEEDED = '@@jedis/FETCH_SUCCEEDED';
@@ -108,7 +112,7 @@ export function addJediFailed(error) {
 export function fetchJedi() {
   return (dispatch) => {
     dispatch(getJedis());
-    axios.get('http://localhost:3001/jedi')
+    axios.get(HOST + JEDI_ENDPOINT)
       .then( (res) => { dispatch(setJedis(res.data)) } )
       .catch( (error) => { dispatch(fetchJedisFailed(error)) } );
   }
@@ -117,7 +121,7 @@ export function fetchJedi() {
 export function postJedi(jedi) {
   return (dispatch) => {
     dispatch(addJedi());
-    axios.post('http://localhost:3001/jedi', { name: jedi.name })
+    axios.post(HOST + JEDI_ENDPOINT, { name: jedi.name })
       .then( (res) => { dispatch(addJediSucceded(res.data)) } )
       .catch( (error) => { dispatch(addJediFailed(error)) } );
   }
